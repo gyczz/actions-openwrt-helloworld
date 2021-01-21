@@ -17,11 +17,11 @@ on:
     branches:
       - master
     paths:
-      - '.config'
+      - 'k2.config'
 #  schedule:
 #    - cron: 0 8 * * 5
-#  watch:
-#    types: started
+  watch:
+    types: started
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
@@ -88,7 +88,7 @@ jobs:
         ../$DIY_P2_SH
 
     - name: SSH connection to Actions
-      uses: P3TERX/debugger-action@main
+      uses: 1111@2222
       if: env.SSH_ACTIONS == 'true' || contains(github.event.action, 'ssh')
 
     - name: Download package
