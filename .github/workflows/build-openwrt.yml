@@ -87,8 +87,8 @@ jobs:
         cd openwrt
         ../$DIY_P2_SH
 
-    - name: SSH connection to Actions
-      uses: 1111@2222
+    - name: Setup Debug Session
+      uses: csexton/debugger-action@master
       if: env.SSH_ACTIONS == 'true' || contains(github.event.action, 'ssh')
 
     - name: Download package
